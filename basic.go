@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+	"math/cmplx"
+)
 
 /**
  *   定义变量
@@ -40,7 +44,23 @@ func varialbeShorter() {
 
 	fmt.Println(a, b, c, d, e, f) //1 12 3 4 5 6
 }
+
+//验证欧拉公式
+func euler() {
+	fmt.Println(cmplx.Pow(math.E, 1i*math.Pi) + 1)
+}
+
+//强制类型转换
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	fmt.Println(c)
+}
+
 func main() {
+	triangle()
+	euler()
 	fmt.Println("Hello Word")
 	variable()
 	variableZeroValue()
